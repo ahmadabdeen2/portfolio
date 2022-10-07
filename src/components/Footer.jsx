@@ -1,9 +1,10 @@
-import React from 'react'
+import React, {useState} from 'react'
 import {Carousel } from '../components'
 import {motion} from 'framer-motion'
 import {logo} from '../assets'
 import {FaInstagram, FaLinkedin, FaGithub, FaTwitter} from 'react-icons/fa'
 import {AiOutlineMail} from 'react-icons/ai'
+import {client } from '../sanityclient'
 
 const links2 = [
     {
@@ -25,6 +26,24 @@ const links2 = [
 
   ];
 const Footer = () => {
+    const [email, setEmail] = useState(false)
+    const [isFormSubmitted, setIsFormSubmitted] = useState(false)
+
+    const handleSubmit = () => {
+
+    
+        const contact = {
+          _type: 'contact',
+            email: email,
+        };
+    
+        client.create(contact)
+          .then(() => {
+          
+            setIsFormSubmitted(true);
+          })
+          .catch((err) => console.log(err));
+      };
   return (
     <div className='bg-primary md:min-h-[100vh] sm:min-h-[70vh] min-h-[50vh] w-full overflow-hidden flex flex-col justify-between '>
        <div className='pt-6'>
@@ -40,9 +59,11 @@ const Footer = () => {
     LET'S GET TO ---- <br/>
     KNOW EACHOTHER
         </motion.h2>
-        <input type="text" className='bg-transparent border-b-[1px] rounded-none border-white text-white text-sm font-monument w-full ml-10 md:placeholder:text-sm placeholder:text-[6px] placeholder:text-[#a5a5a5] placeholder:font-monument' placeholder ='Enter your email address here'/>
-        <button className='bg-white text-primary sm:text-2xl text-xs font-monumentbold sm:w-[200px] w-[100px] '>Send</button>
-        </div>
+
+        <input onChange={(e) => setEmail(e.target.value)} type="email" className='bg-transparent border-b-[1px] rounded-none border-white text-white text-sm font-monument w-full ml-10 md:placeholder:text-sm placeholder:text-[6px] placeholder:text-[#a5a5a5] placeholder:font-monument' placeholder ='Enter your email address here'/>
+        <button onClick={handleSubmit} className='bg-white text-primary sm:text-2xl text-xs font-monumentbold sm:w-[200px] w-[100px] '>Send</button>
+       {isFormSubmitted && <p className='text-white text-sm font-monument'>Thank you for your submission</p>}
+       </div>
         </div>
 
 <div className='flex justify-between sm:px-12 px-10 mb-4 mt-10 '>
