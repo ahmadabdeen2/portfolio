@@ -46,7 +46,7 @@ const Footer = () => {
       .catch((err) => console.log(err));
   };
   return (
-    <div className="bg-primary md:min-h-[100vh] sm:min-h-[70vh] min-h-[50vh] w-full overflow-hidden flex flex-col justify-between ">
+    <div className="bg-primary md:min-h-[100vh] sm:min-h-[70vh] min-h-[60vh] w-full px-6 xs:px-0 overflow-hidden flex flex-col justify-between ">
       <div className="pt-6">
         <Carousel
           items={[
@@ -74,20 +74,20 @@ const Footer = () => {
         />
       </div>
       <div className="flex text-left items-center justify-center">
-        <div className="flex flex-col items-end">
+        <div className="flex flex-col items-center">
           <motion.h2
             whileInView={{ opacity: [0, 1] }}
             transition={{ duration: 1 }}
-            className="md:text-7xl lg:text-8xl sm:text-6xl text-2xl   font-monumentbold text-white sm:pb-10 pb-2 text-left"
+            className="md:text-7xl lg:text-8xl sm:text-6xl xxs:text-2xl text-lg   font-monumentbold text-white sm:pb-10 pb-2 text-left"
           >
             LET'S GET TO ---- <br />
             KNOW EACHOTHER
           </motion.h2>
-
+          <div className='flex flex-col items-end w-full'>
           <input
             onChange={(e) => setEmail(e.target.value)}
             type="email"
-            className="bg-transparent border-b-[1px] rounded-none border-white text-white text-sm font-monument w-full ml-10 md:placeholder:text-sm placeholder:text-[6px] placeholder:text-[#a5a5a5] placeholder:font-monument"
+            className="bg-transparent border-b-[1px]  rounded-none border-white text-white text-sm font-monument w-full  md:placeholder:text-sm placeholder:text-[6px] placeholder:text-[#a5a5a5] placeholder:font-monument"
             placeholder="Enter your email address here"
           />
           <button
@@ -96,6 +96,7 @@ const Footer = () => {
           >
             Send
           </button>
+          </div>
           {isFormSubmitted && (
             <p className="text-white text-sm font-monument">
               Thank you for your submission
@@ -104,7 +105,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="flex justify-between sm:px-12 px-10 mb-4 mt-10 ">
+      <div className="flex justify-between sm:px-12 xs:px-10 mb-4 mt-10 ">
         <img
           src={logo}
           alt="logo"

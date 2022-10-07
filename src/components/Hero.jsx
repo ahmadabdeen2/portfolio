@@ -67,7 +67,7 @@ const Hero = () => {
             restDelta: 0.001,
           },
         }}
-        className=" text-[25px] xxs:text-[30px] sm:text-[50px] md:text-[70px] lg:text-[100px] font-monumentbold text-white mt-10 z-[1]"
+        className=" text-[20px] xxs:text-[30px] sm:text-[50px] md:text-[70px] lg:text-[100px] font-monumentbold text-white mt-10 z-[1]"
       >
         FULL STACK DEV
       </motion.h1>
@@ -76,7 +76,7 @@ const Hero = () => {
         {links.map((link) => {
           return (
             <a href={link.url} target="_blank" rel="noreferrer">
-              <h2 className="text-white md:text-xl text-xs  font-monumentbold">
+              <h2 className="text-white md:text-xl xxs:text-xs text-[7px]  font-monumentbold">
                 {link.title}
               </h2>
             </a>

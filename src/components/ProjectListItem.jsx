@@ -37,11 +37,11 @@ const ProjectListItem = (props) => {
       <img
         src={projectstar}
         alt="projectstar"
-        className="sm:max-w-[30px] max-w-[25px] aspect-auto pb-2 md:pt-8 pt-6 w-full"
+        className="sm:max-w-[30px] max-w-[25px] aspect-auto pb-2 md:pt-8 pt-2 w-full"
       />
       <div className="flex justify-between items-center">
         <h3
-          className="font-monumentbold md:text-3xl sm:text-2xl text-xl py-3"
+          className="font-monumentbold md:text-3xl sm:text-2xl xxs:text-xl text-sm py-3"
           onClick={() => setToggle(!toggle)}
         >
           {" "}
@@ -80,7 +80,7 @@ const ProjectListItem = (props) => {
           rel="noreferrer"
           className="flex justify-start items-center"
         >
-          <p className="text-white text-sm font-monument">View Project</p>
+          <p className="text-white xxs:text-sm text-[10px] font-monument">View Project</p>
         </a>
       </div>
     </div>

@@ -19,7 +19,7 @@ const Story = () => {
 
   return (
     <div class="flex flex-col sm:flex-row sm:px-28  justify-between sm:py-10 pt-4">
-      <h2 class="flex text-center text-white h-[100px] sm:sticky top-[30px] font-monument md:text-5xl sm:text-3xl text-2xl w-full md:w-[50%]">
+      <h2 class="flex text-center text-white sm:h-[100px] pb-4 sm:pb-0 sm:sticky top-[30px] font-monument md:text-5xl sm:text-3xl text-2xl w-full md:w-[50%]">
         Story
       </h2>
       <div class=" bg-black text-white font-monument w-full md:w-[50%] ">
@@ -31,7 +31,7 @@ const Story = () => {
               transition={{ duration: 1 }}
               viewport={{ once: true }}
               
-              className="font-monument text-xs sm:text-md md:text-lg text-left w-full pb-10">
+              className="font-monument xxs:text-xs text-[10px] sm:text-md md:text-lg text-left w-full pb-10">
                 {story.description}
               </motion.p>
             );

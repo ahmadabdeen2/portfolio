@@ -16,7 +16,7 @@ const Projects = () => {
   }, []);
   return (
     <div class="flex flex-col sm:flex-row sm:px-28  justify-between py-20">
-      <h2 class="flex text-center text-white h-[100px] sm:sticky top-[30px] font-monument md:text-5xl sm:text-3xl text-2xl w-full md:w-[50%]">
+      <h2 class="flex text-center text-white sm:h-[100px] pb-4 sm:pb-0 sm:sticky top-[30px] font-monument md:text-5xl sm:text-3xl text-2xl w-full md:w-[50%]">
         {" "}
         Projects
       </h2>
