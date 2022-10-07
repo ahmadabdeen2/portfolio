@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { star1, star2, star3 } from "../assets";
 import { client, urlFor } from "../sanityclient";
 
 const Expertise = () => {

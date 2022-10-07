@@ -13,7 +13,6 @@ import {
   Footer,
 } from "./components";
 import { motion } from "framer-motion";
-// import Navbar from './components/Navbar';
 
 
 function App() {
@@ -73,6 +72,7 @@ function App() {
           </div>
           <Footer />
         </div>
+
       )}
     </>
   );

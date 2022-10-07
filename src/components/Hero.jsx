@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { hero, vinyl } from "../assets";
-import { client, urlFor } from "../sanityclient";
-import { motion, AnimatePresence, useTransform } from "framer-motion";
-
+import { client } from "../sanityclient";
+import { motion } from "framer-motion";
 
 const Hero = () => {
   const [links, setLinks] = useState([]);
@@ -53,7 +52,7 @@ const Hero = () => {
         }}
         className="absolute z-[100] w-[100%] h-[100%] top-0 purple__gradient__2"
       />
-  <motion.h1
+      <motion.h1
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
@@ -70,7 +69,6 @@ const Hero = () => {
         }}
         className=" text-[25px] xxs:text-[30px] sm:text-[50px] md:text-[70px] lg:text-[100px] font-monumentbold text-white mt-10 z-[1]"
       >
-    
         FULL STACK DEV
       </motion.h1>
 

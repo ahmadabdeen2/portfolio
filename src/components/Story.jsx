@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { client, urlFor } from "../sanityclient";
+import { client } from "../sanityclient";
 import { photo1, photo2, photo3 } from "../assets";
 
 import {motion} from 'framer-motion'
